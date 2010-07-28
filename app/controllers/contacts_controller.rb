@@ -247,7 +247,12 @@ class ContactsController < ApplicationController
     if current_query.blank?
       Contact.my(records)
     else
-      Contact.my(records).search(current_query)
+      account_records = { 
+        :user => @current_user, :order =>
+        @current_user.pref[:accounts_sort_by] || Account.sort_by
+      }
+      Contact.my(records).search(current_query) |
+        Account.my(account_records).search(current_query).map{|a| a.contacts}.flatten
     end.paginate(pages)
   end
 
