@@ -405,10 +405,10 @@ en-US:
   opportunity: Opportunity
   opportunity_small: opportunity
   opportunity_summary: Opportunity At a Glance
-  opportunity_summary_text: "{{amount}} with {{discount}} discount and {{probability}} probability" 
+  opportunity_summary_text: "{{amount}} with {{probability}} probability" 
   past_due: past due, was expected to close {{value}} ago
   probability: Probability
-  probability_number: and {{value}} probability
+  probability_number: with {{value}} probability
   save_opportunity: Save Opportunity
   stage: Stage
   total_opportunities: Total Opportunities
